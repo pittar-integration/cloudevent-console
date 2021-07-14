@@ -11,7 +11,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/ce")
+@Path("/")
 public class CloudEventConsumerResource {
 
     private List<String> cloudEvents;
@@ -28,6 +28,7 @@ public class CloudEventConsumerResource {
     }
 
     @GET
+    @Path("/ce")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     public EventsDTO getCloudEvents() {
