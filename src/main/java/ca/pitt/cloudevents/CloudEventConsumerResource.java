@@ -1,7 +1,6 @@
 package ca.pitt.cloudevents;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import javax.ws.rs.Consumes;

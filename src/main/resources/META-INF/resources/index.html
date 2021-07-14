@@ -116,17 +116,11 @@
     <div class="left-column">
         <p class="lead">As CloudEvents are consumed by this app, they will be displayed here (every 5 seconds).</p>
 
-        <h2>Stuff Goes Here</h2>
+        <h2>StreamingEvents</h2>
 
-        <p>This page is served by Quarkus. The source is in
 
-        </p>
-        <ul id="eventlist">
-        </ul>
-        
-        <div class="provided-code">
-            <h3>RESTEasy JAX-RS</h3>
-            <p>Easily start your RESTful Web Services</p>
+        <div id="eventlist" class="provided-code">
+            <h3>CloudEvents</h3>
             <p><code>@Path: <a href="/hello" class="path-link" target="_blank">/hello</a></code></p>
             <p><a href="https://quarkus.io/guides/getting-started#the-jax-rs-resources" class="guide-link" target="_blank">Related guide section...</a></p>
         </div>
@@ -167,7 +161,7 @@ $(function(){
     $.get( "/ce", function( data ) {
         console.log(JSON.stringify(data.events));
         data.events.forEach(element => {
-            $("#eventlist").append("<li>" + element + "</li>");
+            $("#eventlist").append("<p><code>" + element + "</code></p>");
         });
     });
 
